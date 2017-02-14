@@ -19,9 +19,9 @@ DOB ECB VIOLATIONS: https://data.cityofnewyork.us/Housing-Development/DOB-ECB-Vi
 
 HISTORICAL DOB PERMITS: https://data.cityofnewyork.us/Housing-Development/Historical-DOB-Permit-Issuance/bty7-2jhb
 
-NYC ZIPCODE SHAPEFILES: public, but saved in repo in /raw_data
+NYC ZIPCODE SHAPEFILES: public, but saved in repo in /raw_data on CUSP server
 
-PAD (used to assign zip codes to BIN): retreived from NYC.gov/CityPLanning but saved in /raw_data
+PAD (used to assign zip codes to BIN): retreived from NYC.gov/CityPLanning but saved in /raw_data on CUSP server
 
 ACS:
 
@@ -40,6 +40,30 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
     - HISTORICAL DOB PERMITS
     - NYC ZIPCODE SHAPEFILES
     - PAD
+
+Data directory should look like this
+
+-working root directory (i.e. git repo on local machine)
+    |--preprocessing_zipcode_output.ipynb
+    |--raw_data
+        |--DOB_Complaints_Received.csv
+        |--DOB_ECB_Violations.csv
+        |--DOB_Violations.csv
+        |--Historical_DOB_Permit_Issuance.csv
+        |--Incidents_Responded_to_by_Fire_Companies.csv
+        |--NYC_ZIPS
+            |--(zip files...)
+        |--PAD
+            |--(pad files...)
+        |--PLUTO
+            |--Bronx
+                |--(bronx pluto shapefiles...)
+            .....and so on for 5 boros
+    |--processed_data (this script will create this the first time)
+        |--master_pluto.pickle (script will create this first time)
+        |--master_merged.csv (this is the output every time you run the script)
+        
+
 
 Filters for select features from each data set, aggregates and scales values for these features to the zip code level, and integrateds them.
 
