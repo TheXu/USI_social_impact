@@ -41,10 +41,10 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
     - NYC ZIPCODE SHAPEFILES
     - PAD
     
-Data directory "/raw_data" should be structured as indicated in notebook (how it's structured on CUSP server)
+- Data directory "/raw_data" should be structured as indicated in notebook (how it's structured on CUSP server)
 
-Filters for select features from each data set, aggregates and scales values for these features to the zip code level, and integrateds them.
+- This script filters for select features from each data set, aggregates and scales values for these features to the zip code level, and integrateds them.
 
-NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
+- NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
 
-- Output: a sparse matrix of approx 187 zip codes with 1400+ feature fields
+- OUTPUT: a sparse matrix of approx 187 zip codes with 1400+ feature fields
