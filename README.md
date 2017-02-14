@@ -43,6 +43,8 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
     
 - Data directory "/raw_data" should be structured as indicated in notebook (how it's structured on CUSP server)
 
+- Must also create a "/processed_data" folder in your root working directory (i.e. this repo on local machine)
+
 - This script filters for select features from each data set, aggregates and scales values for these features to the zip code level, and integrateds them.
 
 - NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
