@@ -23,7 +23,7 @@ NYC ZIPCODE SHAPEFILES: public, but saved in repo in /raw_data on CUSP server
 
 PAD (used to assign zip codes to BIN): retreived from NYC.gov/CityPLanning but saved in /raw_data on CUSP server
 
-ACS:
+ACS: saved in /raw_data on CUSP server
 
 **************
 PRE-PROCESSING
@@ -40,6 +40,7 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
     - HISTORICAL DOB PERMITS
     - NYC ZIPCODE SHAPEFILES
     - PAD
+    - CENSUS DATA
     
 - Data directory "/raw_data" should be structured as indicated in notebook (how it's structured on CUSP server)
 
@@ -49,4 +50,4 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
 
-- OUTPUT: a sparse matrix of approx 187 zip codes with 1400+ feature fields
+- OUTPUT: a sparse matrix of approx 195 zip codes with 1400+ feature fields
