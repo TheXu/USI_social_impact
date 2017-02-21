@@ -21,6 +21,8 @@ HISTORICAL DOB PERMITS: https://data.cityofnewyork.us/Housing-Development/Histor
 
 NYC ZIPCODE SHAPEFILES: public, but saved in repo in /raw_data on CUSP server
 
+NYC TRACT SHAPEFILES: public, but saved in repo in /raw_data on CUSP server
+
 PAD (used to assign zip codes to BIN): retreived from NYC.gov/CityPLanning but saved in /raw_data on CUSP server
 
 ACS: saved in /raw_data on CUSP server
