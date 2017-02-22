@@ -21,9 +21,11 @@ HISTORICAL DOB PERMITS: https://data.cityofnewyork.us/Housing-Development/Histor
 
 NYC ZIPCODE SHAPEFILES: public, but saved in repo in /raw_data on CUSP server
 
+NYC TRACT SHAPEFILES: public, but saved in repo in /raw_data on CUSP server
+
 PAD (used to assign zip codes to BIN): retreived from NYC.gov/CityPLanning but saved in /raw_data on CUSP server
 
-ACS:
+ACS: saved in /raw_data on CUSP server
 
 **************
 PRE-PROCESSING
@@ -40,6 +42,7 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
     - HISTORICAL DOB PERMITS
     - NYC ZIPCODE SHAPEFILES
     - PAD
+    - CENSUS DATA
     
 - Data directory "/raw_data" should be structured as indicated in notebook (how it's structured on CUSP server)
 
@@ -49,4 +52,23 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
 
-- OUTPUT: a sparse matrix of approx 187 zip codes with 1400+ feature fields
+- OUTPUT: a sparse matrix of approx 195 zip codes with 1400+ feature fields
+
+"Preprocessing_tract_output"
+- Takes as input:
+    - NYC MapPLUTO
+    - DOB COMPLAINTS
+    - DOB VIOLATIONS
+    - DOB ECB VIOLATIONS
+    - HISTORICAL DOB PERMITS
+    - NYC TRACT SHAPEFILES
+    - PAD
+    - CENSUS DATA
+    
+- Data directory "/raw_data" should be structured as indicated in notebook (how it's structured on CUSP server)
+
+- Must also create a "/processed_data" folder in your root working directory (i.e. this repo on local machine)
+
+- This script filters for select features from each data set, aggregates and scales values for these features to the census tract level, and integrateds them.
+
+- OUTPUT: a sparse matrix of approx 3100 census tracts with 1400+ feature fields
