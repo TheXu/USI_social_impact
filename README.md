@@ -52,9 +52,9 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
 
-- OUTPUT: a sparse matrix of approx 195 zip codes with 750+ feature fields for given years (2013-14  or 2015)
+- OUTPUT: a sparse matrix of approx 195 zip codes with 700+ feature fields for given years (2013-14  or 2015)
 
-"Preprocessing_tract_output"
+"Preprocessing_tract_output_2013-14" and "Preprocessing_tract_output_2015"
 - Takes as input:
     - NYC MapPLUTO
     - DOB COMPLAINTS
@@ -71,4 +71,4 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - This script filters for select features from each data set, aggregates and scales values for these features to the census tract level, and integrateds them.
 
-- OUTPUT: a sparse matrix of approx 3100 census tracts with 750+ feature fields for given years (2013-14  or 2015)
+- OUTPUT: a sparse matrix of approx 3100 census tracts with 700+ feature fields for given years (2013-14  or 2015)
