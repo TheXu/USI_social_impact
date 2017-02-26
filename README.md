@@ -32,7 +32,7 @@ PRE-PROCESSING
 **************
 Data must be integrated, cleaned, filtered, and scaled as appropriate. That is done through various pre-processing scripts and notebooks.
 
-"Preprocessing_zipcode_output"
+"Preprocessing_zipcode_output_2013-14" and "Preprocessing_zipcode_output_2015"
 - Takes as input:
     - FDNY
     - NYC MapPLUTO
@@ -52,7 +52,7 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - NOTE: for processing efficiency, you only must run PLUTO data loading once and create a pickle in your local directory /processed_data/master_pluto.pickle  and then you can commment out those lines and subsequently load the pickle.
 
-- OUTPUT: a sparse matrix of approx 195 zip codes with 1400+ feature fields
+- OUTPUT: a sparse matrix of approx 195 zip codes with 750+ feature fields for given years (2013-14  or 2015)
 
 "Preprocessing_tract_output"
 - Takes as input:
@@ -71,4 +71,4 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - This script filters for select features from each data set, aggregates and scales values for these features to the census tract level, and integrateds them.
 
-- OUTPUT: a sparse matrix of approx 3100 census tracts with 1400+ feature fields
+- OUTPUT: a sparse matrix of approx 3100 census tracts with 750+ feature fields for given years (2013-14  or 2015)
