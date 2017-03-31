@@ -32,7 +32,7 @@ PRE-PROCESSING
 **************
 Data must be integrated, cleaned, filtered, and scaled as appropriate. That is done through various pre-processing scripts and notebooks.
 
-"Preprocessing_zipcode_output_2013-14" and "Preprocessing_zipcode_output_2015"
+"Preprocessing_zipcode_output_2013", "...2014", "...2015"
 - Takes as input:
     - FDNY
     - NYC MapPLUTO
@@ -54,7 +54,7 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 
 - OUTPUT: a sparse matrix of approx 195 zip codes with 700+ feature fields for given years (2013-14  or 2015)
 
-"Preprocessing_tract_output_2013-14" and "Preprocessing_tract_output_2015"
+"Preprocessing_tract_output_2013", "...2014", "...2015"
 - Takes as input:
     - NYC MapPLUTO
     - DOB COMPLAINTS
@@ -72,3 +72,10 @@ Data must be integrated, cleaned, filtered, and scaled as appropriate. That is d
 - This script filters for select features from each data set, aggregates and scales values for these features to the census tract level, and integrateds them.
 
 - OUTPUT: a sparse matrix of approx 3100 census tracts with 700+ feature fields for given years (2013-14  or 2015)
+
+**************
+STATISTICAL MODELS
+**************
+Data output by the pre-processing scripts will be saved in the "processed_data" you've created.
+
+The statistical model scrips, such as linear regression, random forest, and MLP neural network all reference as source data the final integrated dataset as output into this "processed_data" folder.
